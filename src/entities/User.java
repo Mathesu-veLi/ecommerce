@@ -12,6 +12,8 @@ public class User {
 
   private List<Address> addresses = new ArrayList<>();
 
+  public Cart cart = new Cart();
+
   public User(String name, String email, String password, String cpf, String phoneNumber) {
     this.name = name;
     this.email = email;
