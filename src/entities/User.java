@@ -14,6 +14,15 @@ public class User {
 
   public Cart cart = new Cart();
 
+  public User(String name, String email, String password, Cpf cpf, String phoneNumber, List<Address> addresses) {
+    this.name = name;
+    this.email = email;
+    this.password = password;
+    this.cpf = cpf;
+    this.phoneNumber = phoneNumber;
+    this.addresses = addresses;
+  }
+
   public User(String name, String email, String password, String cpf, String phoneNumber) {
     this.name = name;
     this.email = email;
