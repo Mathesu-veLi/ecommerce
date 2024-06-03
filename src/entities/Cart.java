@@ -6,14 +6,12 @@ import java.util.List;
 public class Cart {
   private List<Product> products = new ArrayList<>();
 
-  public Product addItem(Product newProduct) {
+  public void addProduct(ProductManager productManager, Product newProduct) {
     products.add(newProduct);
-    return newProduct;
   }
 
-  public Product removeProduct(Product product) {
+  public void removeProduct(Product product) {
     products.remove(product);
-    return product;
   }
 
   public List<Product> getProducts() {
