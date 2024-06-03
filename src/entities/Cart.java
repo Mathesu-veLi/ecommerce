@@ -7,7 +7,9 @@ public class Cart {
   private List<Product> products = new ArrayList<>();
 
   public void addProduct(ProductManager productManager, Product newProduct) {
-    products.add(newProduct);
+    if (productManager.getProducts().contains(newProduct)) {
+      products.add(newProduct);
+    }
   }
 
   public void removeProduct(Product product) {
