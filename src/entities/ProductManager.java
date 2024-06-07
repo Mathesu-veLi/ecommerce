@@ -6,6 +6,14 @@ import java.util.List;
 public class ProductManager {
   private List<Product> products = new ArrayList<>();
 
+  public ProductManager() {}
+
+  public ProductManager(List<Product> products) {
+    for (Product product: products) {
+      this.products.add(product);
+    }
+  }
+
   public List<Product> getProducts() {
     return products;
   }
