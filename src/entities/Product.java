@@ -40,3 +40,6 @@ public class Product {
     return id;
   }
 }
+
+// TODO: Creates Price class to control discounts in the products prices
+// TODO: Creates categories of products using enum

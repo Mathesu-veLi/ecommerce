@@ -5,9 +5,11 @@ import java.util.List;
 
 public class User {
   private String id;
+  //TODO: Creates a id using a java uuid generator
   private String name;
   private String email;
   private String password;
+  //TODO: Creates a hash of password
   private Cpf cpf;
   private String phoneNumber;
 
@@ -62,3 +64,7 @@ public class User {
     addresses.add(newAddress);
   }
 }
+
+// TODO: Creates IUser with id, name, email, password and generateId()
+// TODO: Creates class CommonUser implementing IUser to buyers
+// TODO: Creates class AdminUser implementing IUser to administrators

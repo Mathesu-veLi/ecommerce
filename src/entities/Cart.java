@@ -28,3 +28,5 @@ public class Cart {
     return totalPrice;
   }
 }
+
+// TODO: Creates the increaseQuantity(Product product) to increase the quantity of a product in the cart when the user tries to add an already added product
