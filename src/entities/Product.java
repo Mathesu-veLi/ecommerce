@@ -1,7 +1,9 @@
 package entities;
 
+import java.util.UUID;
+
 public class Product {
-  private Integer id;
+  private UUID uuid = UUID.randomUUID();
   private String name;
   private Double price;
   private Integer stock;
@@ -39,8 +41,8 @@ public class Product {
     this.stock = stock;
   }
 
-  public Integer getId() {
-    return id;
+  public UUID getUuid() {
+    return uuid;
   }
 }
 
