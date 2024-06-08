@@ -5,11 +5,11 @@ import java.util.List;
 
 public class User {
   private String id;
-  //TODO: Creates a id using a java uuid generator
+  // TODO: Creates a id using a java uuid generator
   private String name;
   private String email;
   private String password;
-  //TODO: Creates a hash of password
+  // TODO: Creates a hash of password
   private Cpf cpf;
   private String phoneNumber;
 
@@ -38,6 +38,9 @@ public class User {
     this.name = name;
     this.email = email;
     this.password = password;
+  }
+
+  public User() {
   }
 
   public String getName() {
