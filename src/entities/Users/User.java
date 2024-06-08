@@ -3,9 +3,9 @@ package entities.Users;
 public abstract class User {
   private String id;
   // TODO: Creates a id using a java uuid generator
-  private String name;
-  private String email;
-  private String password;
+  protected String name;
+  protected String email;
+  protected String password;
   // TODO: Creates a hash of password
 
   public User(String name, String email, String password) {
