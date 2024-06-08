@@ -1,8 +1,9 @@
 package entities.Users;
 
+import java.util.UUID;
+
 public abstract class User {
-  private String id;
-  // TODO: Creates a id using a java uuid generator
+  protected String uuid = UUID.randomUUID().toString();
   protected String name;
   protected String email;
   protected String password;
