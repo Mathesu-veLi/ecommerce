@@ -1,5 +1,7 @@
 package entities;
 
+import java.util.HashMap;
+import java.util.Map;
 import java.util.UUID;
 
 public class Product {
@@ -43,6 +45,14 @@ public class Product {
 
   public String getUuid() {
     return uuid;
+  }
+
+  public Map<String, Object> getHashMap() {
+    Map<String, Object> productMap = new HashMap<>();
+    productMap.put("name", getName());
+    productMap.put("price", getPrice());
+
+    return productMap;
   }
 }
 
