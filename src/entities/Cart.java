@@ -10,9 +10,10 @@ public class Cart {
   }
 
   public void addProduct(ProductManager productManager, Product newProduct) {
-    if (productManager.getProducts().contains(newProduct)) {
+    if (productManager.getProduct(newProduct.getUuid()) != null) {
       products.add(newProduct);
     }
+    //FIXME: Handle the error that getProducts will throw
   }
 
   public void removeProduct(Product product) {
