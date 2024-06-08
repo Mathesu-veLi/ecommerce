@@ -2,6 +2,7 @@ package entities;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
 
 public class Cart {
   private List<Product> products = new ArrayList<>();
@@ -14,14 +15,15 @@ public class Cart {
       products.add(newProduct);
     }
     //FIXME: Handle the error that getProducts will throw
+    //TODO: Throw error if product not exists
   }
 
   public void removeProduct(Product product) {
     products.remove(product);
   }
 
-  public List<Product> getProducts() {
-    return products;
+  public List<Map<String, Object>> getProducts() {
+    return products.stream().map(product -> product.getHashMap()).toList();
   }
 
   public double getTotalPrice() {
