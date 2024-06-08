@@ -1,4 +1,4 @@
-package entities;
+package entities.Users;
 
 public abstract class User {
   private String id;
