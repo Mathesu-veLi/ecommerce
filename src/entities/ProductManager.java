@@ -22,7 +22,11 @@ public class ProductManager {
 
   public Product getProduct(String Uuid) {
     Optional<Product> productFound = products.stream().filter(product -> product.getUuid() == Uuid).findFirst();
-    return productFound.get();
+
+    if (productFound.isPresent()) {
+      return productFound.get();
+    }
+    return null;
     // FIXME: Throws a error when the productFound is empty
   }
 
