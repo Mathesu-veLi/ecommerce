@@ -16,8 +16,12 @@ public class ProductManager {
   public ProductManager() {
   }
 
-  public List<Product> getProducts() {
-    return products;
+  public String getProducts() {
+    StringBuilder sb = new StringBuilder();
+    for (Product product : products) {
+      sb.append(String.format("%d: %s\n", products.indexOf(product), product.getName()));
+    }
+    return sb.toString();
   }
 
   public Product getProduct(String Uuid) {
