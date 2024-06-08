@@ -19,15 +19,15 @@ public class Customer extends User {
     super(name, email, password);
   }
 
-  public Customer(String name, String email, String password, Cpf cpf, String phoneNumber, List<Address> addresses) {
+  public Customer(String name, String email, String password, String cpf, String phoneNumber, List<Address> addresses) {
     super(name, email, password);
-    this.cpf = cpf;
+    this.cpf = new Cpf(cpf);
     this.phoneNumber = phoneNumber;
     this.addresses = addresses;
   }
 
-  public Cpf getCpf() {
-    return cpf;
+  public String getCpf() {
+    return String.valueOf(cpf);
   }
 
   public String getPhoneNumber() {
