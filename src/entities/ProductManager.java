@@ -24,14 +24,13 @@ public class ProductManager {
     return sb.toString();
   }
 
-  public Product getProduct(String Uuid) {
+  public Integer getProductIndex(String Uuid) {
     Optional<Product> productFound = products.stream().filter(product -> product.getUuid() == Uuid).findFirst();
-
-    if (productFound.isPresent()) {
-      return productFound.get();
+    if (productFound.isEmpty()) {
+      return -1;
     }
-    return null;
-    // FIXME: Throws a error when the productFound is empty
+
+    return products.indexOf(productFound.get());
   }
 
   public void addProduct(Product newProduct) {
