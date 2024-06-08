@@ -30,7 +30,3 @@ public abstract class User {
     return email;
   }
 }
-
-// TODO: Creates IUser with id, name, email, password and generateId()
-// TODO: Creates class CommonUser implementing IUser to buyers
-// TODO: Creates class AdminUser implementing IUser to administrators
