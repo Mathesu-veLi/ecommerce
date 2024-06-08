@@ -11,9 +11,10 @@ public class Cart {
   }
 
   public void addProduct(ProductManager productManager, Product newProduct) {
-    if (productManager.getProduct(newProduct.getUuid()) != null) {
+    if (productManager.getProductIndex(newProduct.getUuid()) != -1) {
       products.add(newProduct);
     }
+    
     //FIXME: Handle the error that getProducts will throw
     //TODO: Throw error if product not exists
   }
