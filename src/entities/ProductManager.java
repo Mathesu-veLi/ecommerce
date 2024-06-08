@@ -37,7 +37,7 @@ public class ProductManager {
     products.add(newProduct);
   }
 
-  public void removeProduct(Product product) {
-    products.remove(product);
+  public void removeProduct(int productIndex) {
+    products.remove(productIndex);
   }
 }
