@@ -7,6 +7,8 @@ public class Cpf {
     this.formattedCpf = originalCpf.replaceAll("\\D", "");
   }
 
+  // TODO: Calls the validate function in the constructor and throw a Error if cpf is invalid
+
   public boolean validate() {
     if (formattedCpf.length() != 11) return false;
     
@@ -31,5 +33,10 @@ public class Cpf {
     if (digit > 9) digit = 0;
 
     return String.valueOf(digit);
+  }
+
+  @Override
+  public String toString() {
+    return formattedCpf;
   }
 }
