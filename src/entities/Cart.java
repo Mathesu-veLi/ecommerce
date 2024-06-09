@@ -8,15 +8,16 @@ public class Cart {
   private List<Product> products = new ArrayList<>();
 
   public Cart() {
+  
   }
 
   public void addProduct(ProductManager productManager, Product newProduct) {
-    if (productManager.getProductIndex(newProduct.getUuid()) != -1) {
+    if (!productManager.getProduct(newProduct.getUuid()).equals(-1)) {
       products.add(newProduct);
     }
-    
-    //FIXME: Handle the error that getProducts will throw
-    //TODO: Throw error if product not exists
+
+    // FIXME: Handle the error that getProduct will throw
+    // TODO: Throw error if product not exists
   }
 
   public void removeProduct(Product product) {
