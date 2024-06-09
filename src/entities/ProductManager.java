@@ -31,9 +31,9 @@ public class ProductManager {
     return productsHashMap;
   }
 
-  public Product getProduct(String Uuid) {
+  public Object getProduct(String Uuid) {
     Integer productIndex = getProductIndex(Uuid);
-    return products.get(productIndex);
+    return productIndex != -1 ?  products.get(productIndex) : productIndex;
   }
 
   private Integer getProductIndex(String Uuid) {
