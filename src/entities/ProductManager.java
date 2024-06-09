@@ -1,7 +1,9 @@
 package entities;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 import java.util.Optional;
 
 public class ProductManager {
@@ -16,15 +18,25 @@ public class ProductManager {
   public ProductManager() {
   }
 
-  public String getProducts() {
-    StringBuilder sb = new StringBuilder();
+  public List<Map<String, Object>> getProducts() {
+    List<Map<String, Object>> productsHashMap = new ArrayList<>();
     for (Product product : products) {
-      sb.append(String.format("%d: %s\n", products.indexOf(product), product.getName()));
+      Map<String, Object> productHashMap = new HashMap<>();
+      productHashMap.put("name", product.getName());
+      productHashMap.put("price", product.getPrice());
+      productHashMap.put("stock", product.getStock());
+      productsHashMap.add(productHashMap);
     }
-    return sb.toString();
+    
+    return productsHashMap;
   }
 
-  public Integer getProductIndex(String Uuid) {
+  public Product getProduct(String Uuid) {
+    Integer productIndex = getProductIndex(Uuid);
+    return products.get(productIndex);
+  }
+
+  private Integer getProductIndex(String Uuid) {
     Optional<Product> productFound = products.stream().filter(product -> product.getUuid() == Uuid).findFirst();
     if (productFound.isEmpty()) {
       return -1;
