@@ -21,11 +21,7 @@ public class ProductManager {
   public List<Map<String, Object>> getProducts() {
     List<Map<String, Object>> productsHashMap = new ArrayList<>();
     for (Product product : products) {
-      Map<String, Object> productHashMap = new HashMap<>();
-      productHashMap.put("name", product.getName());
-      productHashMap.put("price", product.getPrice());
-      productHashMap.put("stock", product.getStock());
-      productsHashMap.add(productHashMap);
+      productsHashMap.add(product.getHashMap());
     }
     
     return productsHashMap;

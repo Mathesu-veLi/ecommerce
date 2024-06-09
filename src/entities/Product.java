@@ -48,6 +48,7 @@ public class Product {
     Map<String, Object> productMap = new HashMap<>();
     productMap.put("name", getName());
     productMap.put("price", getPrice());
+    productMap.put("stock", getStock());
 
     return productMap;
   }
