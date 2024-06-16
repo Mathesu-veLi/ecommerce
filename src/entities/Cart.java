@@ -11,8 +11,11 @@ public class Cart {
   
   }
 
+
+
   public void addProduct(ProductManager productManager, Product newProduct) {
     if (!productManager.getProduct(newProduct.getUuid()).equals(-1)) {
+      newProduct.setQuantity(1);
       products.add(newProduct);
     }
 
